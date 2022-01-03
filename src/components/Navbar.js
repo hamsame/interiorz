@@ -1,17 +1,23 @@
-import React from 'react'
-import { Link as PageLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink as PageLink } from 'react-router-dom'
 
 const Navbar = () => {
-  const showNav = (e) => {
-    e.preventDefault()
+  const [icon, setIcon] = useState('☰')
+  const showNav = () => {
+    const nav = document.querySelector('nav')
+    const ul = nav.children[2]
+    icon === '☰' ? setIcon('X') : setIcon('☰')
+    console.log(ul)
+    ul.classList.toggle('shown')
   }
+
   return (
     <nav>
       <h1>
         <PageLink to='/'>Interiorz</PageLink>
       </h1>
       <span className='hamburger' onClick={() => showNav()}>
-        &#9776;
+        {icon}
       </span>
       <ul>
         <li>
