@@ -20,4 +20,25 @@ $font2: 'Poppins', sans-serif;
   text-decoration: none;
 }
 
+p {
+  font-family: $font2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font1;
+}
+
 @import 'nav';
+@import '_home';
+
+section {
+  margin: 2vh 0;
+  width: 88%;
+  margin: 2vh auto;
+  padding: 2rem 0;
+}
