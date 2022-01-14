@@ -97,6 +97,11 @@ nav > ul {
 .home {
   background: #fff;
   color: #222;
+  font-family: "Poppins", sans-serif;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .hero {
@@ -217,6 +222,11 @@ nav > ul {
 
 .process article img {
   width: 40%;
+}
+
+.want-design * {
+  margin: 2vh auto;
+  line-height: 2.2;
 }
 
 section {

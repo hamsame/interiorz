@@ -1,6 +1,11 @@
 .home {
   background: #fff;
   color: #222;
+  font-family: $font2;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .hero {
@@ -85,4 +90,11 @@
 
 .process article img {
   width: 40%;
+}
+
+.want-design {
+  * {
+    margin: 2vh auto;
+    line-height: 2.2;
+  }
 }

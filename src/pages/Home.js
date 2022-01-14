@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
+const setPageTitle = () => {
+  document.title = 'Interiorz || Home'
+}
 
 const Home = () => {
+  useEffect(() => {
+    setPageTitle()
+  }, [])
+
   return (
     <main className='home'>
       <section className='hero'>
@@ -38,6 +47,21 @@ const Home = () => {
             src='https://images.pexels.com/photos/1181623/pexels-photo-1181623.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
             alt=''
           />
+        </article>
+      </section>
+
+      <section>
+        <article className='want-design'>
+          <h2>Have a project in mind?</h2>
+          <hr />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas a
+            dignissimos id quibusdam. Repellat ducimus perspiciatis asperiores
+            esse, assumenda beatae est reprehenderit nostrum? Repellendus fugit
+            similique numquam, laborum laboriosam at iure placeat? Eveniet
+            corrupti sapiente tenetur illo aliquid nihil reiciendis?
+          </p>
+          <Link to='contact'>Tell us about your project</Link>
         </article>
       </section>
     </main>
