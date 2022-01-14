@@ -1,3 +1,8 @@
+.home {
+  background: #fff;
+  color: #222;
+}
+
 .hero {
   margin: -3vh 0 0;
   position: relative;
@@ -48,25 +53,34 @@
   word-wrap: break-word;
   gap: 2.5%;
   padding: 2rem 0;
-  width: 96%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  span {
+    margin: 0 auto;
+    font-size: 1.25rem;
+  }
+
   @media (max-width: 768px) {
-    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: flex-start;
     & img {
-      width: 60% !important;
-      margin-top: 2vh;
+      width: 75% !important;
+      margin-top: 2.5vh;
     }
     &:nth-child(odd) {
-      flex-direction: row !important;
+      flex-direction: column-reverse !important;
+    }
+    span {
+      margin: 0;
     }
   }
 }
 
 .process article:nth-child(odd) {
   flex-direction: row-reverse;
-  justify-content: space-between;
 }
 
 .process article img {
