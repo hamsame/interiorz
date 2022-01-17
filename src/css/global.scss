@@ -2,10 +2,10 @@
 
 // main colour vars
 $primaryColor: red;
-$secondayColor: #333;
+$secondayColor: #222;
 
 // text colour vars
-$primaryTextColor: #333;
+$primaryTextColor: #222;
 $secondaryTextColor: #fff;
 
 // font vars
@@ -36,6 +36,7 @@ h6 {
 @import 'nav';
 @import '_home';
 @import '_about';
+@import '_contact';
 
 section {
   margin: 2vh 0;

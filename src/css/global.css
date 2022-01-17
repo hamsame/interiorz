@@ -247,6 +247,81 @@ a:hover {
   font-family: "Poppins", sans-serif;
 }
 
+.form-area {
+  padding: 2rem auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+@media (max-width: 768px) {
+  .form-area {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.form {
+  width: 96%;
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+.form .submit-form {
+  padding: 0.75rem 1.25rem;
+  border: 1px solid black;
+  background: red;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.form .submit-form:hover {
+  background: #222;
+  color: #fff;
+}
+
+.form > .form-control {
+  margin: 3vh 0;
+}
+
+.form > .form-control * {
+  display: block;
+}
+
+.form > .form-control label {
+  font-size: 1.25rem;
+}
+
+.form > .form-control input {
+  margin-bottom: 2vh;
+  width: 60%;
+  padding: 4px 2rem;
+}
+
+@media (max-width: 768px) {
+  .form > .form-control input {
+    width: 70%;
+  }
+}
+
+.contact-details {
+  font-family: "Inter", sans-serif;
+}
+
+.contact-details li {
+  margin: 2vh 0;
+}
+
 section {
   margin: 2vh 0;
   width: 88%;

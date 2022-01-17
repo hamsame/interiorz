@@ -1,0 +1,55 @@
+.form-area {
+  padding: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: start;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.form {
+  width: 96%;
+  margin: 0 auto;
+  font-size: 1.25rem;
+
+  .submit-form {
+    padding: 0.75rem 1.25rem;
+    border: 1px solid black;
+    background: $primaryColor;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      background: $primaryTextColor;
+      color: #fff;
+    }
+  }
+
+  & > .form-control {
+    margin: 3vh 0;
+    * {
+      display: block;
+    }
+    label {
+      font-size: 1.25rem;
+    }
+    input {
+      margin-bottom: 2vh;
+      width: 60%;
+      padding: 4px 2rem;
+      @media (max-width: 768px) {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.contact-details {
+  font-family: $font1;
+  li {
+    margin: 2vh 0;
+  }
+}
