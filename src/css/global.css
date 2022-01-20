@@ -305,13 +305,19 @@ a:hover {
 .form > .form-control input {
   margin-bottom: 2vh;
   width: 60%;
-  padding: 4px 2rem;
+  padding: 4px 0.5rem;
 }
 
 @media (max-width: 768px) {
   .form > .form-control input {
     width: 70%;
   }
+}
+
+.form > .form-control textarea {
+  width: 60%;
+  padding: 10px;
+  height: 9vh;
 }
 
 .contact-details {
@@ -327,5 +333,9 @@ section {
   width: 88%;
   margin: 2vh auto;
   padding: 2rem 0;
+}
+
+.pageTitle {
+  margin-left: 6%;
 }
 /*# sourceMappingURL=global.css.map */

@@ -39,10 +39,15 @@
     input {
       margin-bottom: 2vh;
       width: 60%;
-      padding: 4px 2rem;
+      padding: 4px 0.5rem;
       @media (max-width: 768px) {
         width: 70%;
       }
+    }
+    textarea {
+      width: 60%;
+      padding: 10px;
+      height: 9vh;
     }
   }
 }
