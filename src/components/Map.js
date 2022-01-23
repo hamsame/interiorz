@@ -13,22 +13,16 @@ const MapContainer = () => {
     lng: -0.2287984,
   }
 
-  const markerLocation = {
-    name: 'location',
-    location: {
-      lat: 51.4925419,
-      lng: -0.2287984,
-    },
-  }
-
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MAP_SECRET}>
-      <GoogleMap
-        mapContainerStyle={mapStyles}
-        zoom={13}
-        center={defaultCenter}
-      />
-      <Marker key={markerLocation.name} position={markerLocation} />
+      <GoogleMap mapContainerStyle={mapStyles} zoom={15} center={defaultCenter}>
+        <Marker
+          position={{
+            lat: 51.4925419,
+            lng: -0.2287984,
+          }}
+        />
+      </GoogleMap>
     </LoadScript>
   )
 }
