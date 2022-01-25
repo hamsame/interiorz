@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { createClient } from 'contentful'
+import { Link } from 'react-router-dom'
 
 function Blog() {
   const [articles, setArticles] = useState([])
@@ -9,22 +10,35 @@ function Blog() {
     accessToken: process.env.REACT_APP_CMS_SECRET,
   })
 
-  const getData = async () => {
-    const res = await client.getEntries()
+  const getData = async (request) => {
+    const res = await client.getEntries(request)
     const data = await res
-    console.log(data.items)
     setArticles(data.items)
   }
 
   useEffect(() => {
-    getData()
+    getData({ content_type: 'blog' })
   }, [])
 
   return (
     <div>
       <h1>Articles</h1>
-      {articles.map((article, index) => {
-        return <h4 key={index}>{article.fields.title}</h4>
+      {articles.map((article) => {
+        // const
+        return (
+          <article key={article.sys.id}>
+            <Link to={`/blog/${article.sys.id}`}>
+              <img
+                style={{ width: '60%' }}
+                src={article.fields.thumbnail.fields.file.url}
+                alt={article.fields.thumbnail.fields.description}
+              />
+            </Link>
+            <Link to={`/blog/${article.sys.id}`}>
+              <h4>{article.fields.title}</h4>
+            </Link>
+          </article>
+        )
       })}
     </div>
   )
