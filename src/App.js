@@ -6,6 +6,7 @@ import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import Navbar from './components/Navbar'
 import Blog from './pages/blog'
+import Post from './pages/blog/[id]'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='about' element={<About />} />
         <Route path='contact' element={<Contact />} />
         <Route path='blog' element={<Blog />} />
+        <Route path={`/blog/:id`} element={<Post />} />
         <Route exact path='*' element={<NotFound />} />
       </Routes>
     </Router>
