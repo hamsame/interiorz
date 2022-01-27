@@ -1,0 +1,14 @@
+.fetchedArticle {
+  .blogTitle {
+    font-size: 2rem;
+    margin: 2vh 0;
+  }
+  h2 {
+    margin: 3vh 0;
+  }
+  @media (max-width: 768px) {
+    img {
+      width: 100%;
+    }
+  }
+}
