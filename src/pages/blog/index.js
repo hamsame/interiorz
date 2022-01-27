@@ -29,7 +29,6 @@ function Blog() {
             <article className='article' key={article.sys.id}>
               <Link to={`/blog/${article.sys.id}`}>
                 <img
-                  style={{ width: '52.5%' }}
                   src={article.fields.thumbnail.fields.file.url}
                   alt={article.fields.thumbnail.fields.description}
                 />

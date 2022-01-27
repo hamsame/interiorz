@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import { createClient } from 'contentful'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 function Post() {
   const [post, setPost] = useState({})
   const [paramsPresent, setParamsPresent] = useState(false)
   const params = useParams()
   // console.log(params.id)
-  // console.log(post)
+  console.log(post)
 
   const client = createClient({
     space: process.env.REACT_APP_SPACE_SECRET,
@@ -30,8 +31,14 @@ function Post() {
   } else {
     return (
       <section>
-        <article>
-          <h1>{post.fields.title}</h1>
+        <article className='fetchedArticle'>
+          <img
+            width='50%'
+            src={post.fields.thumbnail.fields.file.url}
+            alt={post.fields.thumbnail.fields.description}
+          />
+          <h1 className='blogTitle'>{post.fields.title}</h1>
+          {documentToReactComponents(post.fields.blogContent)}
         </article>
       </section>
     )
