@@ -21,26 +21,29 @@ function Blog() {
   }, [])
 
   return (
-    <div>
-      <h1>Articles</h1>
-      {articles.map((article) => {
-        // const
-        return (
-          <article key={article.sys.id}>
-            <Link to={`/blog/${article.sys.id}`}>
-              <img
-                style={{ width: '60%' }}
-                src={article.fields.thumbnail.fields.file.url}
-                alt={article.fields.thumbnail.fields.description}
-              />
-            </Link>
-            <Link to={`/blog/${article.sys.id}`}>
-              <h4>{article.fields.title}</h4>
-            </Link>
-          </article>
-        )
-      })}
-    </div>
+    <main>
+      <h1 className='pageTitle'>Blog</h1>
+      <section className='articles'>
+        {articles.map((article) => {
+          return (
+            <article className='article' key={article.sys.id}>
+              <Link to={`/blog/${article.sys.id}`}>
+                <img
+                  style={{ width: '52.5%' }}
+                  src={article.fields.thumbnail.fields.file.url}
+                  alt={article.fields.thumbnail.fields.description}
+                />
+              </Link>
+              <h4 className='articleName'>
+                <Link to={`/blog/${article.sys.id}`}>
+                  {article.fields.title}
+                </Link>
+              </h4>
+            </article>
+          )
+        })}
+      </section>
+    </main>
   )
 }
 
