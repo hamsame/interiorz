@@ -25,16 +25,17 @@ function Blog() {
       <h1 className='pageTitle'>Blog</h1>
       <section className='articles'>
         {articles.map((article) => {
+          console.log(article)
           return (
             <article className='article' key={article.sys.id}>
-              <Link to={`/blog/${article.sys.id}`}>
+              <Link to={`/blog/${article.fields.slug}-${article.sys.id}`}>
                 <img
                   src={article.fields.thumbnail.fields.file.url}
                   alt={article.fields.thumbnail.fields.description}
                 />
               </Link>
               <h4 className='articleName'>
-                <Link to={`/blog/${article.sys.id}`}>
+                <Link to={`/blog/${article.fields.slug}-${article.sys.id}`}>
                   {article.fields.title}
                 </Link>
               </h4>
