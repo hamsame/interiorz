@@ -5,6 +5,8 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import Navbar from './components/Navbar'
+import Blog from './pages/blog'
+import Post from './pages/blog/[slug]-[id]'
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path='about' element={<About />} />
         <Route path='contact' element={<Contact />} />
+        <Route path='blog' element={<Blog />} />
+        <Route path={`blog/:slug-:id`} element={<Post />} />
         <Route exact path='*' element={<NotFound />} />
       </Routes>
     </Router>

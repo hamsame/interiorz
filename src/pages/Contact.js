@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import MapContainer from '../components/Map'
 
 const Contact = () => {
   const [shown, setShown] = useState(false)
@@ -116,6 +117,7 @@ const Contact = () => {
           </ul>
         </article>
       </section>
+      <MapContainer />
     </main>
   )
 }

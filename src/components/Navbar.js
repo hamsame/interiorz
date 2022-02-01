@@ -27,6 +27,9 @@ const Navbar = () => {
           <PageLink to='about'>About</PageLink>
         </li>
         <li>
+          <PageLink to='blog'>Blog</PageLink>
+        </li>
+        <li>
           <PageLink to='contact'>Contact</PageLink>
         </li>
       </ul>
