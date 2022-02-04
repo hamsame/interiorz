@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+  const [showMessage, setShowMessage] = useState(false)
+
+  const message = () => {
+    setShowMessage(true)
+    setTimeout(() => {
+      setShowMessage(false)
+    }, 3000)
+  }
+
   return (
     <footer>
       <section>
@@ -15,10 +24,19 @@ const Footer = () => {
             <h3>Join Our Email List</h3>
             <p>Receive weekly emails about how to design, offers and more!</p>
             <input type='email' name='email' id='email' />
-            &nbsp;
-            <button type='submit' className='submit-btn'>
+            <button
+              type='submit'
+              className='submit-btn'
+              onClick={() => message()}
+            >
               SUBMIT
             </button>
+            {showMessage && (
+              <p>
+                Thanks for joining our mailing list. You can unsubscribe at any
+                time.
+              </p>
+            )}
           </div>
 
           <ul>

@@ -415,9 +415,21 @@ footer .footer-f {
   }
 }
 
+footer .footer-f div {
+  width: 50%;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  footer .footer-f div {
+    width: 100%;
+  }
+}
+
 footer .footer-f input[type='email'] {
   width: 70%;
   height: 2rem;
+  margin-right: 2.5%;
 }
 
 footer .footer-f a {

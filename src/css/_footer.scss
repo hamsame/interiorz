@@ -25,9 +25,18 @@ footer {
       gap: 1rem;
     }
 
+    div {
+      width: 50%;
+      margin: 0;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
     input[type='email'] {
       width: 70%;
       height: 2rem;
+      margin-right: 2.5%;
     }
 
     a {
