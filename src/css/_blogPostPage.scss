@@ -1,17 +1,11 @@
 .fetchedArticle {
-  * {
-    margin: 3.5vh 0;
-  }
   .blogTitle {
     font-size: 2rem;
-    margin: 4vh 0 !important;
+    margin: 2vh 0;
   }
-
-  img,
-  video {
-    margin: 1vh 0 !important;
+  h2 {
+    margin: 3vh 0;
   }
-
   @media (max-width: 768px) {
     img {
       width: 100%;
