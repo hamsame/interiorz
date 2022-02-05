@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { createClient } from 'contentful'
 import { Link } from 'react-router-dom'
+import { setPageTitle } from '../../components/updatePageTitle'
 
 function Blog() {
   const [articles, setArticles] = useState([])
@@ -18,6 +19,7 @@ function Blog() {
 
   useEffect(() => {
     getData({ content_type: 'blog' })
+    setPageTitle('Interiorz | Blog')
   }, [])
 
   return (
