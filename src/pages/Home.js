@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { setPageTitle } from '../components/updatePageTitle'
+
+const setPageTitle = () => {
+  document.title = 'Interiorz || Home'
+}
 
 const Home = () => {
   useEffect(() => {
-    setPageTitle('Interiorz')
+    setPageTitle()
   }, [])
 
   return (
