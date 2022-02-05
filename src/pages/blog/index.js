@@ -27,7 +27,6 @@ function Blog() {
       <h1 className='pageTitle'>Blog</h1>
       <section className='articles'>
         {articles.map((article) => {
-          console.log(article)
           return (
             <article className='article' key={article.sys.id}>
               <Link to={`/blog/${article.fields.slug}-${article.sys.id}`}>

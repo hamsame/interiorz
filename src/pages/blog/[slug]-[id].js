@@ -8,7 +8,6 @@ import { setPageTitle } from '../../components/updatePageTitle'
 function Post() {
   const [post, setPost] = useState(null)
   const params = useParams()
-  console.log(params)
   const client = createClient({
     space: process.env.REACT_APP_SPACE_SECRET,
     accessToken: process.env.REACT_APP_CMS_SECRET,

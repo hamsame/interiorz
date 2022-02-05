@@ -361,13 +361,18 @@ a:hover {
   margin: 2vh auto;
 }
 
-.fetchedArticle .blogTitle {
-  font-size: 2rem;
-  margin: 2vh 0;
+.fetchedArticle * {
+  margin: 3.5vh 0;
 }
 
-.fetchedArticle h2 {
-  margin: 3vh 0;
+.fetchedArticle .blogTitle {
+  font-size: 2rem;
+  margin: 4vh 0 !important;
+}
+
+.fetchedArticle img,
+.fetchedArticle video {
+  margin: 1vh 0 !important;
 }
 
 @media (max-width: 768px) {
