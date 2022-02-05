@@ -1,7 +1,7 @@
 // render options to parse contenful data
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 
-export const renderOption = {
+export const renderOptions = {
   renderNode: {
     [INLINES.EMBEDDED_ENTRY]: (node, children) => {
       const baseInfo = node.data.target
