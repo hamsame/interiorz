@@ -1,11 +1,6 @@
-import React, { useEffect } from 'react'
-import { setPageTitle } from '../components/updatePageTitle'
+import React from 'react'
 
 const NotFound = () => {
-  useEffect(() => {
-    setPageTitle('Page Not Found')
-  }, [])
-
   return (
     <div>
       <h1>404 page</h1>
