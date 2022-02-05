@@ -7,6 +7,7 @@ import NotFound from './pages/NotFound'
 import Navbar from './components/Navbar'
 import Blog from './pages/blog'
 import Post from './pages/blog/[slug]-[id]'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path={`blog/:slug-:id`} element={<Post />} />
         <Route exact path='*' element={<NotFound />} />
       </Routes>
+      <Footer />
     </Router>
   )
 }
