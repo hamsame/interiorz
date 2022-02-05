@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { serviceDetails } from '../components/ServiceDetails'
+import { setPageTitle } from '../components/updatePageTitle'
 
 const About = () => {
+  useEffect(() => {
+    setPageTitle('Interiorz | About')
+  }, [])
   return (
     <main className='about'>
       <h1>About Us</h1>
