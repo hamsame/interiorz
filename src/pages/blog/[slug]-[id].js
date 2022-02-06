@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import { createClient } from 'contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { renderOption } from '../../components/renderOptions'
+import { renderOptions } from '../../components/renderOptions'
 import { setPageTitle } from '../../components/updatePageTitle'
 
 function Post() {
