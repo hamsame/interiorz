@@ -36,7 +36,7 @@ function Post() {
             alt={post.fields.thumbnail.fields.description}
           />
           <h1 className='blogTitle'>{post.fields.title}</h1>
-          {documentToReactComponents(post.fields.blogContent, renderOption)}
+          {documentToReactComponents(post.fields.blogContent, renderOptions)}
         </article>
       </section>
     )
