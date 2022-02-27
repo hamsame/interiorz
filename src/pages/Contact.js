@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import MapContainer from '../components/Map'
-import { setPageTitle } from '../components/updatePageTitle'
 
 const Contact = () => {
   const [shown, setShown] = useState(false)
@@ -41,10 +40,6 @@ const Contact = () => {
       setShown(false)
     }, 3000)
   }
-
-  useEffect(() => {
-    setPageTitle('Interiorz | Contact')
-  }, [])
 
   return (
     <main>
