@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Interiorz
+<details><summary><b>Table Of Contents</b></summary>
+<ol>
+<li><a href="#about-the-project"> About The Project</a></li>
+<li><a href="#lessons-learned"> Lessons Learned</a></li>
+<li><a href="#getting-started"> Getting Started </a>
+  <ul>
+    <li><a href="#prerequisites"> Prerequisites</a></li>
+     <li><a href="#installation"> Installation</a></li>
+</ul>
+</li>
+</ol>
+</details>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### About The Project
+A website I made for a fake interior design company built with React JS and a headless Content Management System for the backend named Contentful CMS.
 
-## Available Scripts
+### Lessons Learned
+I learned how to use environmental variabales to use secret API keys without exposing them in the codebase where anyone who might have malicious intentions would find it. 
 
-In the project directory, you can run:
+I also learned how to set up the "react-router-dom" package so that a non coder can create, edit and delete webpages just by using a content management system any computer literate person can use with little to no help. This means that each time a new blogpost is made, react makes a new page for that blogpost with the text and media being in the same order it was in the blogpost. 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Getting Started
+This a brief guide on setting this project up locally.
+<br>
+### Prerequisites
+If you do not have npm installed enter the command below into command prompt if you are on windows or into terminal if you are a mac user.
+```
+$ npm install npm@latest -g
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
+With npm installed you can then clone (download a copy) of this repository (entire project and history):
 
-### `npm test`
+```
+# Clone this repository
+$ git clone https://github.com/hamsame/interiorz/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Go into the repository
+$ cd gamerland
 
-### `npm run build`
+# Remove current origin repository
+$ git remote remove origin
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Enter the commands beneath to start coding
+```
+# Install dependencies
+$ npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Start local development server
+$ npm start
+```
